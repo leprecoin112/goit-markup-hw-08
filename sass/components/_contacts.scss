@@ -1,0 +1,19 @@
+/* Contacts */
+.contacts {
+  @include flexGapWrap(flex, 50px);
+
+  margin-left: auto;
+}
+
+.contacts__link {
+  @include flexCentered();
+  gap: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--text-tertiary-color);
+}
+
+.contacts__icon {
+  fill: currentColor;
+}

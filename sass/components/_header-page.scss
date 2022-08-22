@@ -1,0 +1,8 @@
+/* Header page */
+
+.header-page {
+  border-bottom: 1px solid #ececec;
+}
+.header-page__container {
+  @include flexCentered();
+}

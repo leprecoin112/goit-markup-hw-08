@@ -1,0 +1,26 @@
+/* example */
+.example {
+  @include flexGapWrap(flex, 30px, wrap);
+}
+
+.example__item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+}
+
+.example__title {
+  position: absolute;
+  @include flexCentered();
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}

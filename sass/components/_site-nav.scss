@@ -1,0 +1,27 @@
+/* Site navigation */
+.site-nav {
+  @include flexGapWrap(flex, 50px);
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &--active {
+    position: relative;
+    color: var(--text-accent-color);
+  }
+
+  &--active::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: var(--text-accent-color);
+  }
+}

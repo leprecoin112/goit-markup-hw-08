@@ -1,0 +1,38 @@
+/* Footer page */
+
+.footer-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--bg-primary-color);
+}
+
+.footer-page__wrap {
+  flex-grow: 1;
+  margin-right: 70px;
+
+  &--m-r {
+    flex-grow: 0;
+    margin-right: 93px;
+  }
+}
+
+.footer-page__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-page__logo {
+  padding: 0;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
+.footer-page__title {
+  margin-bottom: 20px;
+  color: var(--text-secondary-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
