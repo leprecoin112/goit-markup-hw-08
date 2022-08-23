@@ -1,5 +1,14 @@
 /* Address */
 
+.address__item {
+  text-align: center;
+  width: 100%;
+
+  @include desktop {
+    text-align: start;
+  }
+}
+
 .address__item:not(:last-child) {
   margin-bottom: 10px;
 }

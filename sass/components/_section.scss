@@ -1,21 +1,38 @@
 /* Section */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  &--not-padding-t {
-    padding-top: 0;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &--bg-tertiary {
     background-color: var(--bg-tertiary-color);
   }
+
+  @media screen and (max-width: 1199px) {
+    &--is-hidden-mobile {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &--not-padding-t {
+    padding-top: 0;
+  }
 }
 
 .section__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.16;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include desktop {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }

@@ -1,11 +1,19 @@
 /* Customers */
 .customers {
-  @include flexGapWrap(flex, 30px);
+  @include flexGapWrap(flex, 30px, wrap);
 }
 
 .customers__item {
   height: 92px;
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
+
+  @include tablet {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @include desktop {
+    width: calc((100% - 150px) / 6);
+  }
 }
 .customers__link {
   @include flexCentered();
