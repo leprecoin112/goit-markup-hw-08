@@ -2,9 +2,9 @@
 
 .logo {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: auto;
 
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -17,6 +17,8 @@
   @include desktop {
     font-size: 26px;
     line-height: 1.19;
+
+    margin-right: 93px;
   }
 }
 .logo__second {

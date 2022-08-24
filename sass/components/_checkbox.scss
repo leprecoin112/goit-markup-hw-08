@@ -1,15 +1,21 @@
 /* checkbox */
 .checkbox {
   @include flexCentered();
+  flex-wrap: wrap;
   margin-bottom: 30px;
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   cursor: pointer;
 
   color: var(--text-tertiary-color);
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__icon {
@@ -36,4 +42,9 @@
   font-weight: 400;
   margin-left: 7px;
   color: var(--text-accent-color);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }

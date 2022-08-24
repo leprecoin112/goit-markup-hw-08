@@ -24,8 +24,19 @@
         <!--Logo-->
         <a href="./index.html" class="logo">Web<span class="logo__second">Studio</span> </a>
 
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu_burger"></use>
+          </svg>
+        </button>
+
         <!--Navigation-->
-        <div class="menu">
+        <div class="menu js-menu-container" id="mobile-menu">
+          <button class="menu-toggle menu-toggle--m-l-a js-close-menu">
+            <svg class="menu-toggle__icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-menu_cross"></use>
+            </svg>
+          </button>
           <nav>
             <ul class="site-nav">
               <li class="site-nav__item">
@@ -48,10 +59,54 @@
               >
             </li>
             <li class="contacts__item">
-              <a class="link contacts__link" href="tel:+380961111111"
+              <a
+                class="link contacts__link contacts__link--mobile-font-size-b"
+                href="tel:+380961111111"
                 ><svg class="contacts__icon" width="10" height="16">
                   <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
                 >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-socials">
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="instagram"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="twitter"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="facebook"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="linkedin"
+                >Linkedin</a
               >
             </li>
           </ul>
@@ -126,6 +181,7 @@
             <li class="example__item">
               <img
                 class="example__img"
+                srcset="./images/examples/coding.jpg 1x, ./images/examples/coding@2x.jpg 2x"
                 src="./images/examples/coding.jpg"
                 alt="Десктопные приложения"
                 width="370"
@@ -135,6 +191,7 @@
             <li class="example__item">
               <img
                 class="example__img"
+                srcset="./images/examples/adaptive.jpg 1x, ./images/examples/adaptive@2x.jpg 2x"
                 src="./images/examples/adaptive.jpg"
                 alt="Мобильные приложения"
                 width="370"
@@ -144,6 +201,7 @@
             <li class="example__item">
               <img
                 class="example__img"
+                srcset="./images/examples/design.jpg 1x, ./images/examples/design@2x.jpg 2x"
                 src="./images/examples/design.jpg"
                 alt="Дизайнерские решения"
                 width="370"
@@ -161,6 +219,7 @@
             <li class="team__item">
               <img
                 class="team__img"
+                srcset="./images/team/igor.jpg 1x, ./images/team/igor@2x.jpg 2x"
                 src="./images/team/igor.jpg"
                 alt="Игорь Демьяненко"
                 width="270"
@@ -217,7 +276,13 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./images/team/olga.jpg" alt="Ольга Репина" width="270" />
+              <img
+                class="team__img"
+                srcset="./images/team/olga.jpg 1x, ./images/team/olga@2x.jpg 2x"
+                src="./images/team/olga.jpg"
+                alt="Ольга Репина"
+                width="270"
+              />
               <div class="team__inner">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -272,6 +337,7 @@
             <li class="team__item">
               <img
                 class="team__img"
+                srcset="./images/team/nikolay.jpg 1x, ./images/team/nikolay@2x.jpg 2x"
                 src="./images/team/nikolay.jpg"
                 alt="Николай Тарасов"
                 width="270"
@@ -330,6 +396,7 @@
             <li class="team__item">
               <img
                 class="team__img"
+                srcset="./images/team/miha.jpg 1x, ./images/team/miha@2x.jpg 2x"
                 src="./images/team/miha.jpg"
                 alt="Михаил Ермаков"
                 width="270"
@@ -646,5 +713,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

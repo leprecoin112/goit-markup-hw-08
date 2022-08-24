@@ -24,38 +24,95 @@
         <!--Logo-->
         <a href="./index.html" class="logo">Web<span class="logo__second">Studio</span> </a>
 
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu_burger"></use>
+          </svg>
+        </button>
+
         <!--Navigation-->
-        <nav>
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a href="./index.html" class="link site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="link site-nav__link site-nav__link--active"
-                >Портфолио</a
+        <div class="menu js-menu-container" id="mobile-menu">
+          <button class="menu-toggle menu-toggle--m-l-a js-close-menu">
+            <svg class="menu-toggle__icon" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-menu_cross"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="link site-nav__link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="link site-nav__link site-nav__link--active"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item"><a href="" class="link site-nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <!--Contacts-->
+          <ul class="contacts">
+            <li class="contacts__item">
+              <a class="link contacts__link" href="mailto:info@devstudio.com"
+                ><svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="site-nav__item"><a href="" class="link site-nav__link">Контакты</a></li>
+            <li class="contacts__item">
+              <a
+                class="link contacts__link contacts__link--mobile-font-size-b"
+                href="tel:+380961111111"
+                ><svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
-
-        <!--Contacts-->
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="link contacts__link" href="mailto:info@devstudio.com"
-              ><svg class="contacts__icon" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="link contacts__link" href="tel:+380961111111"
-              ><svg class="contacts__icon" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu-socials">
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="instagram"
+                >Instagram</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="twitter"
+                >Twitter</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="facebook"
+                >Facebook</a
+              >
+            </li>
+            <li class="menu-socials__item">
+              <a
+                href=""
+                class="link menu-socials__link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="linkedin"
+                >Linkedin</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -82,9 +139,14 @@
 
           <ul class="portfolio">
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/techno.jpg" alt="Технокряк" width="370" />
+                  <img
+                    srcset="./images/portfolio/techno.jpg 1x, ./images/portfolio/techno@2x.jpg 2x"
+                    src="./images/portfolio/techno.jpg"
+                    alt="Технокряк"
+                    width="370"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -98,9 +160,13 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <img
+                    srcset="
+                      ./images/portfolio/new-orlean.jpg    1x,
+                      ./images/portfolio/new-orlean@2x.jpg 2x
+                    "
                     src="./images/portfolio/new-orlean.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
@@ -118,9 +184,14 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/seafood.jpg" alt="Ресторан Seafood" width="370" />
+                  <img
+                    srcset="./images/portfolio/seafood.jpg 1x, ./images/portfolio/seafood@2x.jpg 2x"
+                    src="./images/portfolio/seafood.jpg"
+                    alt="Ресторан Seafood"
+                    width="370"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -134,9 +205,14 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/prime.jpg" alt="Проект Prime" width="370" />
+                  <img
+                    srcset="./images/portfolio/prime.jpg 1x, ./images/portfolio/prime@2x.jpg 2x"
+                    src="./images/portfolio/prime.jpg"
+                    alt="Проект Prime"
+                    width="370"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -150,9 +226,14 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/boxes.jpg" alt="Проект Boxes" width="370" />
+                  <img
+                    srcset="./images/portfolio/boxes.jpg 1x, ./images/portfolio/boxes@2x.jpg 2x"
+                    src="./images/portfolio/boxes.jpg"
+                    alt="Проект Boxes"
+                    width="370"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -166,9 +247,10 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <img
+                    srcset="./images/portfolio/borders.jpg 1x, ./images/portfolio/borders@2x.jpg 2x"
                     src="./images/portfolio/borders.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
@@ -186,9 +268,13 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
                   <img
+                    srcset="
+                      ./images/portfolio/limited-editional.jpg    1x,
+                      ./images/portfolio/limited-editional@2x.jpg 2x
+                    "
                     src="./images/portfolio/limited-editional.jpg"
                     alt="Издание Limited Edition"
                     width="370"
@@ -206,9 +292,14 @@
               </a>
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/lab.jpg" alt="Проект LAB" width="370" />
+                  <img
+                    srcset="./images/portfolio/lab.jpg 1x, ./images/portfolio/lab@2x.jpg 2x"
+                    src="./images/portfolio/lab.jpg"
+                    alt="Проект LAB"
+                    width="370"
+                  />
 
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -223,9 +314,14 @@
               >
             </li>
             <li class="portfolio__item">
-              <a href="" class="portfolio__link">
+              <a href="" target="_blank" rel="noopener noreferrer nofollow" class="portfolio__link">
                 <div class="portfolio__thumb">
-                  <img src="./images/portfolio/growing.jpg" alt="Growing Business" width="370" />
+                  <img
+                    srcset="./images/portfolio/growing.jpg 1x, ./images/portfolio/growing@2x.jpg 2x"
+                    src="./images/portfolio/growing.jpg"
+                    alt="Growing Business"
+                    width="370"
+                  />
                   <p class="portfolio__overlay">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
                     сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
@@ -339,5 +435,6 @@
         </div>
       </div>
     </footer>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

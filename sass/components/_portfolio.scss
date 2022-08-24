@@ -3,11 +3,21 @@
   @include flexGapWrap(flex, 30px, wrap);
 }
 .portfolio__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
+
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  height: 100%;
 
   transition: box-shadow var(--duration) var(--timing-function);
 
@@ -47,6 +57,10 @@
   .portfolio__link:hover & {
     transform: translateY(0);
   }
+
+  @include mobile {
+    @include flexCentered();
+  }
 }
 
 .portfolio__content {
@@ -54,6 +68,7 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .portfolio__title {

@@ -1,3 +1,99 @@
 .menu {
-  display: none;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 40px;
+  padding-bottom: 48px;
+  background-color: #ffffff;
+
+  transform: translateX(100%);
+  transition: transform var(--duration) var(--timing-function);
+
+  @include tablet {
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    width: auto;
+    height: auto;
+    transform: translateX(0);
+  }
+
+  @include desktop {
+    width: 100%;
+  }
+
+  &--is-open {
+    transform: translateX(0);
+    z-index: 999;
+  }
+
+  @media screen and (max-width: 354px) {
+    padding-left: 15px;
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+
+  background-color: transparent;
+  color: var(--text-primary-color);
+
+  &:hover,
+  &:focus {
+    color: var(--text-accent-color);
+  }
+
+  &--m-l-a {
+    margin-left: auto;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-toggle__icon {
+  fill: currentColor;
+}
+
+.menu-socials {
+  display: flex;
+  gap: 10px;
+
+  @media screen and (max-width: 354px) {
+    gap: 5px;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.menu-socials__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  @media screen and (max-width: 354px) {
+    padding-right: 5px;
+  }
+}
+
+.menu-socials__link {
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--text-accent-color);
+
+  @media screen and (max-width: 408px) {
+    font-size: 15px;
+  }
 }
